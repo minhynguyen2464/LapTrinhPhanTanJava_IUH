@@ -1,0 +1,18 @@
+package ontap;
+import java.net.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class Server {
+	public static void main(String[] args) {
+		final int SERVER_PORT = 8888;
+		ServerSocket serverSocket = null;
+		try {
+			Socket clientSocket = serverSocket.accept();
+			System.out.println("Connected");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

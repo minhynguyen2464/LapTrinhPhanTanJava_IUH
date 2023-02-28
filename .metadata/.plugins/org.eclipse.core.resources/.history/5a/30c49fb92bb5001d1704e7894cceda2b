@@ -1,0 +1,29 @@
+package ontap;
+import java.net.*;
+import java.io.*;
+
+public class Client {
+	public static void main(String[] args) {
+		final int SERVER_PORT = 6666;
+		final String SERVER_NAME = "localhost";
+		Socket clientSocket = null;
+		try {
+			clientSocket = new Socket(SERVER_NAME,SERVER_PORT);
+			//Input
+			System.out.println("Enter number divide by coma: ");
+			BufferedReader inFromClient = new BufferedReader(new InputStreamReader(System.in));
+			String stringNum = inFromClient.readLine();
+			//Out
+			PrintWriter out = new PrintWriter(clientSocket.getOutputStream(),true);
+			out.println(stringNum);
+			//In
+			BufferedReader receiveMsg = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))
+			
+			
+			clientSocket.close();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,25 @@
+package cau1;
+import java.net.*;
+import java.io.*;
+
+
+public class client {
+	public static void main(String[] args) {
+		final int SERVER_PORT = 6666;
+		final String SERVER_NAME = "localhost";
+		DatagramSocket clientSocket = null;5
+		try {
+			clientSocket = new DatagramSocket();
+			BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			if(clientSocket!=null) {
+				clientSocket.close();
+			}
+		}
+	}
+}

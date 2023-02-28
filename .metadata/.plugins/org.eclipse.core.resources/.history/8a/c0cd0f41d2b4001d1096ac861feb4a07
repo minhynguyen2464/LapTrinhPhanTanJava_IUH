@@ -1,0 +1,22 @@
+package cau1;
+import java.net.*;
+import java.io.*;
+
+
+public class client {
+	public static void main(String[] args) {
+		final int SERVER_PORT = 6666;
+		final String SERVER_NAME = "localhost";
+		Socket clientSocket = null;
+		try {
+			clientSocket = new Socket(SERVER_NAME,SERVER_PORT);
+			//Input
+			BufferedReader userInput = new BufferedReader();
+			clientSocket.close();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+}

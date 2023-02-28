@@ -1,0 +1,21 @@
+package ontap;
+import java.net.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class Server {
+	public static void main(String[] args) {
+		final int SERVER_PORT = 8888;
+		ServerSocket serverSocket = null;
+		try {
+			System.out.println("Waiting for connection...");
+			Socket clientSocket = serverSocket.accept();
+			System.out.println("Connected");
+			//Server receive
+			BufferedReader stringNumber = new BufferedReader()
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

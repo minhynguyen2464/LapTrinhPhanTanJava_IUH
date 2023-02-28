@@ -1,0 +1,23 @@
+package cau1;
+import java.net.*;
+
+public class server {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		final int SERVER_PORT = 6666;
+		ServerSocket serverSocket = null;
+		try {
+			serverSocket = new ServerSocket(SERVER_PORT);
+			System.out.println("SERVER IS RUNNING");
+			while(true) {
+				
+			}
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

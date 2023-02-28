@@ -1,0 +1,10 @@
+package cau1;
+import java.net.*;
+
+
+
+public class cau1 {
+	public static void main(String[] args) {
+		
+	}
+}

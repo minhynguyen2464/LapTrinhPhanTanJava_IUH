@@ -1,0 +1,18 @@
+package cau1;
+import java.net.*;
+
+
+
+public class client {
+	public static void main(String[] args) {
+		final int SERVER_PORT = 6666;
+		final String SERVER_NAME = "localhost";
+		DatagramSocket clientSocket = null;
+		try {
+			
+		}
+		catch() {
+			
+		}
+	}
+}

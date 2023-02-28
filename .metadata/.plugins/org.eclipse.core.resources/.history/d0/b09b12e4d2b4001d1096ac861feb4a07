@@ -1,0 +1,16 @@
+package cau1;
+import java.net.*;
+public class server {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		final int SERVER_PORT = 6666;
+		try {
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

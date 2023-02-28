@@ -1,0 +1,10 @@
+package ontap;
+import java.net.*;
+import java.io.*;
+
+public class Client {
+	public static void main(String[] args) {
+		final int SERVER_PORT = 8888;
+		final string SERVER_NAME = "localhost";
+	}
+}
