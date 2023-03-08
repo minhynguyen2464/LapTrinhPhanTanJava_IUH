@@ -1,7 +1,0 @@
-package cau2;
-
-public class process {
-	public int[] splitString(String a) {
-		
-	}
-}
