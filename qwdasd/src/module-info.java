@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author HP
- *
- */
-module qwdasd {
-}
