@@ -8,6 +8,7 @@ public class JDBCUtil {
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/java_tuan4";//Database named java_tuan4
 	private static final String DB_USERNAME = "admin";
 	private static final String DB_PASSWORD = "123qwe!@#";
+	
 	public static Connection getConnection() {
 		Connection conn = null;
 		try {

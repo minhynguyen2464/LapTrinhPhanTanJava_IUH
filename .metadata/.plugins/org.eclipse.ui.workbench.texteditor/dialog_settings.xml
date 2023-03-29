@@ -12,6 +12,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="list"/>
 			<item value="sendMessage"/>
 		</list>
 		<list key="replacehistory">
