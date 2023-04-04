@@ -2,6 +2,7 @@ package baitap;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 public class JDBCUtil {
 	private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
@@ -27,5 +28,17 @@ public class JDBCUtil {
 			e.printStackTrace();
 		}
 		return conn;
+	}
+	
+	public static void databaseQuery(String sql) {
+		Connection conn = JDBCUtil.getConnection();
+		PreparedStatement pr = null;
+		try {
+			pr = conn.prepareStatement(sql);
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

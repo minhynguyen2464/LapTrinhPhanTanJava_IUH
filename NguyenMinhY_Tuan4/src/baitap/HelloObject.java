@@ -67,10 +67,10 @@ public class HelloObject extends UnicastRemoteObject implements HelloInterface{
 		PreparedStatement pre = null;
 		try {
 			conn = JDBCUtil.getConnection();
-			pre = conn.prepareStatement("SELECT english,vietnamese FROM dictonary");
+			pre = conn.prepareStatement("SELECT word_key,english,vietnamese FROM dictonary");
 			ResultSet result = pre.executeQuery();
 			while(result.next()) {
-				System.out.println(result.getString("english")+" | "+result.getString("vietnamese"));
+				System.out.println(result.getInt("word_key")+" | "+result.getString("english")+" | "+result.getString("vietnamese"));
 			}
 			conn.close();
 		}
@@ -86,10 +86,9 @@ public class HelloObject extends UnicastRemoteObject implements HelloInterface{
 		PreparedStatement pre = null;
 		try {
 			conn = JDBCUtil.getConnection();
-			pre = conn.prepareStatement("DELETE FROM dictonary WHERE iddictonary = ?");
+			pre = conn.prepareStatement("DELETE FROM dictonary WHERE word_key = ?");
 			pre.setLong(1, index);
 			pre.execute();
-			System.out.println("DELETE SUCCESSFULLY");
 		}
 		catch(Exception e) {
 			e.printStackTrace();
