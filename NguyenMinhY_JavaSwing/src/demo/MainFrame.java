@@ -16,6 +16,8 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
 
 public class MainFrame extends JFrame {
 
@@ -47,7 +49,7 @@ public class MainFrame extends JFrame {
 	public MainFrame() {
 		setTitle("Dictionary");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 438, 288);
+		setBounds(100, 100, 502, 321);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 

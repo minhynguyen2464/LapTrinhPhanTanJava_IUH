@@ -1,6 +1,7 @@
 package baitap;
 
 import java.io.BufferedReader;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.InputStreamReader;
 import java.rmi.RemoteException;
@@ -41,7 +42,7 @@ public class Client {
 						System.out.print("Please enter words: ");
 						BufferedReader inFromClient = new BufferedReader(new InputStreamReader(System.in));
 						String clientSend = inFromClient.readLine();
-						String result = msg.sendMessenge(clientSend);
+						String result = msg.selectWord(clientSend);
 						System.out.println("Vietnamese is: "+result);
 						break;
 					}
@@ -66,7 +67,13 @@ public class Client {
 						break;
 					}
 					case 4:{
-						msg.listWord();
+						ArrayList<MyDictionary> myList = msg.listWord();
+						//ArrayList<MyDictionary> myList = new ArrayList<MyDictionary>();
+						//myList = msg.listWord();
+						System.out.println("------------------------------------------------");
+						for(MyDictionary result:myList){
+							System.out.println(result.getWord_key()+" "+result.getEnglish()+" "+result.getVietnamese());
+						}
 						break;
 					}
 				}
