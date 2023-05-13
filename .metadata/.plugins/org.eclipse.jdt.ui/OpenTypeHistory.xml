@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=SoapWebServiceExample/src&lt;demo{HelloWorld.java[HelloWorld" modifiers="1" timestamp="1681540365170"/>
+    <typeInfo handle="=SoapWebServiceExample/src\/main\/java&lt;{DictionaryService.java[DictionaryService" modifiers="1" timestamp="1683282125837"/>
+    <typeInfo handle="=DictionaryWebsite/src\/main\/java&lt;{DictionaryService.java[DictionaryService" modifiers="1" timestamp="1683965252646"/>
 </typeInfoHistroy>

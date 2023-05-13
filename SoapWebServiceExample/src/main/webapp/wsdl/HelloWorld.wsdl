@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="searchWord">
+    <complexType>
+     <sequence>
+      <element name="english" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchWordResponse">
+    <complexType>
+     <sequence>
+      <element name="searchWordReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sayHelloWorld">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sayHelloWorldResponse">
+    <complexType>
+     <sequence>
+      <element name="sayHelloWorldReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addNumber">
+    <complexType>
+     <sequence>
+      <element name="num1" type="xsd:int"/>
+      <element name="num2" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addNumberResponse">
+    <complexType>
+     <sequence>
+      <element name="addNumberReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDatabaseConnectionInfo">
+    <complexType/>
+   </element>
+   <element name="getDatabaseConnectionInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="getDatabaseConnectionInfoReturn" type="impl:DatabaseConnectionInfo"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="DatabaseConnectionInfo">
+    <sequence>
+     <element name="dbPassword" nillable="true" type="xsd:string"/>
+     <element name="dbUrl" nillable="true" type="xsd:string"/>
+     <element name="dbUsername" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="addNumbers">
+    <complexType>
+     <sequence>
+      <element name="dto" type="impl:HelloWorldDTO"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="HelloWorldDTO">
+    <sequence>
+     <element name="english" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="num1" type="xsd:int"/>
+     <element name="num2" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <element name="addNumbersResponse">
+    <complexType>
+     <sequence>
+      <element name="addNumbersReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addNumbersResponse">
+
+      <wsdl:part element="impl:addNumbersResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sayHelloWorldRequest">
+
+      <wsdl:part element="impl:sayHelloWorld" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchWordResponse">
+
+      <wsdl:part element="impl:searchWordResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addNumbersRequest">
+
+      <wsdl:part element="impl:addNumbers" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sayHelloWorldResponse">
+
+      <wsdl:part element="impl:sayHelloWorldResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDatabaseConnectionInfoRequest">
+
+      <wsdl:part element="impl:getDatabaseConnectionInfo" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addNumberRequest">
+
+      <wsdl:part element="impl:addNumber" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addNumberResponse">
+
+      <wsdl:part element="impl:addNumberResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchWordRequest">
+
+      <wsdl:part element="impl:searchWord" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDatabaseConnectionInfoResponse">
+
+      <wsdl:part element="impl:getDatabaseConnectionInfoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="HelloWorld">
+
+      <wsdl:operation name="searchWord">
+
+         <wsdl:input message="impl:searchWordRequest" name="searchWordRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:searchWordResponse" name="searchWordResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sayHelloWorld">
+
+         <wsdl:input message="impl:sayHelloWorldRequest" name="sayHelloWorldRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sayHelloWorldResponse" name="sayHelloWorldResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addNumber">
+
+         <wsdl:input message="impl:addNumberRequest" name="addNumberRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addNumberResponse" name="addNumberResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDatabaseConnectionInfo">
+
+         <wsdl:input message="impl:getDatabaseConnectionInfoRequest" name="getDatabaseConnectionInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDatabaseConnectionInfoResponse" name="getDatabaseConnectionInfoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addNumbers">
+
+         <wsdl:input message="impl:addNumbersRequest" name="addNumbersRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addNumbersResponse" name="addNumbersResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="HelloWorldSoapBinding" type="impl:HelloWorld">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="searchWord">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchWordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchWordResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sayHelloWorld">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sayHelloWorldRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sayHelloWorldResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDatabaseConnectionInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDatabaseConnectionInfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDatabaseConnectionInfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addNumbers">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addNumbersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addNumbersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="HelloWorldService">
+
+      <wsdl:port binding="impl:HelloWorldSoapBinding" name="HelloWorld">
+
+         <wsdlsoap:address location="http://localhost:5178/SoapWebServiceExample/services/HelloWorld"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
