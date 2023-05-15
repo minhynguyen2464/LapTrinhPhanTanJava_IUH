@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import com.mysql.cj.x.protobuf.MysqlxPrepare.Prepare;
+
 
 public class DictionaryService implements DictionaryInterface{
     public String lookup(String word) {
@@ -94,4 +96,22 @@ public class DictionaryService implements DictionaryInterface{
         }
 		return max_word;
     }
+
+	public string maxWordSQL(){
+		Connection conn = null;
+		String max_word = null;
+		try{
+			String sql = "SELECT MAX(english) FROM dictonary WHERE CHAR_LENGTH(english)";
+			conn = JDBCUtil.getConnect();
+			PreparedStatement pr = conn.prepareStatement(sql);
+			ResultSet result = pr.executeQuery();
+			if(result.next()){
+				max_word = result.getString("english");
+			}	
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		return max_word;
+	}
 }
